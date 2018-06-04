@@ -26,6 +26,12 @@ namespace O365EmailSender
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Please send email and password");
+                return;
+            }
+
             try
             {
                 this.FileHandler.SendEmails(this.Subject, this.Message, txtUserName.Text, txtPassword.Text);

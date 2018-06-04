@@ -32,6 +32,8 @@
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtFilePath = new System.Windows.Forms.TextBox();
             this.dgvToInfo = new System.Windows.Forms.DataGridView();
+            this.Name2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblToInfoMessage = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.txtEmailTemplate = new System.Windows.Forms.TextBox();
@@ -40,8 +42,6 @@
             this.lblPreview = new System.Windows.Forms.Label();
             this.btnSendEmails = new System.Windows.Forms.Button();
             this.txtSubject = new System.Windows.Forms.TextBox();
-            this.Name2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvToInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@
             this.btnStart.Location = new System.Drawing.Point(12, 61);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(745, 23);
-            this.btnStart.TabIndex = 5;
+            this.btnStart.TabIndex = 2;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
@@ -61,7 +61,7 @@
             this.btnBrowse.Location = new System.Drawing.Point(682, 23);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowse.TabIndex = 4;
+            this.btnBrowse.TabIndex = 1;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
@@ -71,7 +71,7 @@
             this.txtFilePath.Location = new System.Drawing.Point(12, 23);
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.Size = new System.Drawing.Size(654, 20);
-            this.txtFilePath.TabIndex = 3;
+            this.txtFilePath.TabIndex = 0;
             // 
             // dgvToInfo
             // 
@@ -83,8 +83,22 @@
             this.dgvToInfo.Location = new System.Drawing.Point(12, 139);
             this.dgvToInfo.Name = "dgvToInfo";
             this.dgvToInfo.Size = new System.Drawing.Size(745, 561);
-            this.dgvToInfo.TabIndex = 6;
+            this.dgvToInfo.TabIndex = 3;
             this.dgvToInfo.Visible = false;
+            // 
+            // Name2
+            // 
+            this.Name2.HeaderText = "Name";
+            this.Name2.MinimumWidth = 15;
+            this.Name2.Name = "Name2";
+            this.Name2.Width = 300;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 30;
+            this.Email.Name = "Email";
+            this.Email.Width = 400;
             // 
             // lblToInfoMessage
             // 
@@ -102,7 +116,7 @@
             this.btnNext.Location = new System.Drawing.Point(682, 723);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
-            this.btnNext.TabIndex = 8;
+            this.btnNext.TabIndex = 4;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Visible = false;
@@ -115,7 +129,7 @@
             this.txtEmailTemplate.Multiline = true;
             this.txtEmailTemplate.Name = "txtEmailTemplate";
             this.txtEmailTemplate.Size = new System.Drawing.Size(684, 292);
-            this.txtEmailTemplate.TabIndex = 9;
+            this.txtEmailTemplate.TabIndex = 6;
             this.txtEmailTemplate.Visible = false;
             // 
             // lblEmailInfo
@@ -134,7 +148,7 @@
             this.btnNext2.Location = new System.Drawing.Point(1425, 406);
             this.btnNext2.Name = "btnNext2";
             this.btnNext2.Size = new System.Drawing.Size(75, 23);
-            this.btnNext2.TabIndex = 11;
+            this.btnNext2.TabIndex = 7;
             this.btnNext2.Text = "Next";
             this.btnNext2.UseVisualStyleBackColor = true;
             this.btnNext2.Visible = false;
@@ -155,7 +169,7 @@
             this.btnSendEmails.Location = new System.Drawing.Point(830, 737);
             this.btnSendEmails.Name = "btnSendEmails";
             this.btnSendEmails.Size = new System.Drawing.Size(670, 23);
-            this.btnSendEmails.TabIndex = 13;
+            this.btnSendEmails.TabIndex = 8;
             this.btnSendEmails.Text = "Start Sending Emails";
             this.btnSendEmails.UseVisualStyleBackColor = true;
             this.btnSendEmails.Visible = false;
@@ -167,22 +181,8 @@
             this.txtSubject.Location = new System.Drawing.Point(816, 82);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(684, 26);
-            this.txtSubject.TabIndex = 14;
+            this.txtSubject.TabIndex = 5;
             this.txtSubject.Visible = false;
-            // 
-            // Name2
-            // 
-            this.Name2.HeaderText = "Name";
-            this.Name2.MinimumWidth = 15;
-            this.Name2.Name = "Name2";
-            this.Name2.Width = 300;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 30;
-            this.Email.Name = "Email";
-            this.Email.Width = 400;
             // 
             // Form1
             // 
