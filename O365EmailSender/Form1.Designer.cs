@@ -82,7 +82,7 @@
             this.dgvToInfo.Enabled = false;
             this.dgvToInfo.Location = new System.Drawing.Point(12, 139);
             this.dgvToInfo.Name = "dgvToInfo";
-            this.dgvToInfo.Size = new System.Drawing.Size(745, 561);
+            this.dgvToInfo.Size = new System.Drawing.Size(745, 576);
             this.dgvToInfo.TabIndex = 3;
             this.dgvToInfo.Visible = false;
             // 
@@ -113,7 +113,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(682, 723);
+            this.btnNext.Location = new System.Drawing.Point(703, 737);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 4;
@@ -188,6 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1549, 772);
             this.Controls.Add(this.txtSubject);
             this.Controls.Add(this.btnSendEmails);
