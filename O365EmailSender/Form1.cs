@@ -66,11 +66,25 @@ namespace O365EmailSender
             lblPreview.Text = string.Format(txtEmailTemplate.Text, dgvToInfo.Rows[0].Cells[0].Value.ToString());
             lblPreview.Visible = true;
             btnSendEmails.Visible = true;
+            btnAttach.Visible = true;
+            txtAttachments.Visible = true;
         }
 
         private void btnSendEmails_Click(object sender, EventArgs e)
         {
             new EmailForm(txtSubject.Text, txtEmailTemplate.Text, this.FileHandler).Show();
+        }
+
+        private void btnAttach_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Multiselect = true;
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string[] readFilePaths = fileDialog.FileNames;
+                txtAttachments.Text = string.Join(",", readFilePaths);
+                this.FileHandler.Attachments = readFilePaths;
+            }
         }
     }
 }

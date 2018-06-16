@@ -26,6 +26,8 @@ namespace O365EmailSender
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            btnSend.Enabled = false;
+
             if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
                 MessageBox.Show("Please send email and password");
@@ -42,7 +44,6 @@ namespace O365EmailSender
                 return;
             }
             this.lblResult.Visible = true;
-            btnSend.Enabled = false;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace O365EmailSender
     {
         public string FilePath { get; set; }
         public List<User> Users { get; set; }
-
+        public string[] Attachments{ get; set; }
         public List<User> ReadUsers()
         {
             Users = new List<User>();
@@ -71,7 +71,18 @@ namespace O365EmailSender
                 EmailMessage email = new EmailMessage(service);
 
                 email.Subject = subject;
-                email.Body = string.Format(message, user.Name);
+
+                email.Body = new MessageBody(string.Format(message, user.Name));
+                email.Body.BodyType = BodyType.Text;
+
+                if (this.Attachments != null && this.Attachments.Length > 0)
+                {
+                    foreach (string att in this.Attachments)
+                    {
+                        email.Attachments.AddFileAttachment(att);
+                    }
+                }
+                
                 email.ToRecipients.Add(user.Email);
 
                 email.SendAndSaveCopy();

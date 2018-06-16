@@ -42,6 +42,8 @@
             this.lblPreview = new System.Windows.Forms.Label();
             this.btnSendEmails = new System.Windows.Forms.Button();
             this.txtSubject = new System.Windows.Forms.TextBox();
+            this.btnAttach = new System.Windows.Forms.Button();
+            this.txtAttachments = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvToInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,10 +127,11 @@
             // txtEmailTemplate
             // 
             this.txtEmailTemplate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailTemplate.Location = new System.Drawing.Point(816, 111);
+            this.txtEmailTemplate.Location = new System.Drawing.Point(817, 111);
             this.txtEmailTemplate.Multiline = true;
             this.txtEmailTemplate.Name = "txtEmailTemplate";
-            this.txtEmailTemplate.Size = new System.Drawing.Size(684, 292);
+            this.txtEmailTemplate.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtEmailTemplate.Size = new System.Drawing.Size(684, 226);
             this.txtEmailTemplate.TabIndex = 6;
             this.txtEmailTemplate.Visible = false;
             // 
@@ -145,7 +148,7 @@
             // 
             // btnNext2
             // 
-            this.btnNext2.Location = new System.Drawing.Point(1425, 406);
+            this.btnNext2.Location = new System.Drawing.Point(1425, 343);
             this.btnNext2.Name = "btnNext2";
             this.btnNext2.Size = new System.Drawing.Size(75, 23);
             this.btnNext2.TabIndex = 7;
@@ -157,9 +160,9 @@
             // lblPreview
             // 
             this.lblPreview.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreview.Location = new System.Drawing.Point(826, 444);
+            this.lblPreview.Location = new System.Drawing.Point(821, 371);
             this.lblPreview.Name = "lblPreview";
-            this.lblPreview.Size = new System.Drawing.Size(674, 290);
+            this.lblPreview.Size = new System.Drawing.Size(674, 316);
             this.lblPreview.TabIndex = 12;
             this.lblPreview.Text = "TEST";
             this.lblPreview.Visible = false;
@@ -184,12 +187,34 @@
             this.txtSubject.TabIndex = 5;
             this.txtSubject.Visible = false;
             // 
+            // btnAttach
+            // 
+            this.btnAttach.Location = new System.Drawing.Point(830, 708);
+            this.btnAttach.Name = "btnAttach";
+            this.btnAttach.Size = new System.Drawing.Size(122, 23);
+            this.btnAttach.TabIndex = 14;
+            this.btnAttach.Text = "Add Attachments";
+            this.btnAttach.UseVisualStyleBackColor = true;
+            this.btnAttach.Visible = false;
+            this.btnAttach.Click += new System.EventHandler(this.btnAttach_Click);
+            // 
+            // txtAttachments
+            // 
+            this.txtAttachments.Enabled = false;
+            this.txtAttachments.Location = new System.Drawing.Point(974, 711);
+            this.txtAttachments.Name = "txtAttachments";
+            this.txtAttachments.Size = new System.Drawing.Size(521, 20);
+            this.txtAttachments.TabIndex = 13;
+            this.txtAttachments.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1549, 772);
+            this.Controls.Add(this.btnAttach);
+            this.Controls.Add(this.txtAttachments);
             this.Controls.Add(this.txtSubject);
             this.Controls.Add(this.btnSendEmails);
             this.Controls.Add(this.lblPreview);
@@ -226,6 +251,8 @@
         private System.Windows.Forms.TextBox txtSubject;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.Button btnAttach;
+        private System.Windows.Forms.TextBox txtAttachments;
     }
 }
 
