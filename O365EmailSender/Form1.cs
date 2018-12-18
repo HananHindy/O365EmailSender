@@ -45,7 +45,7 @@ namespace O365EmailSender
 
             foreach (var u in users)
             {
-                dgvToInfo.Rows.Add(u.Name, u.Email);
+                dgvToInfo.Rows.Add(u.Name, u.Email, u.Company);
             }
 
             lblToInfoMessage.Visible = true;
@@ -63,7 +63,10 @@ namespace O365EmailSender
 
         private void btnNext2_Click(object sender, EventArgs e)
         {
-            lblPreview.Text = string.Format(txtEmailTemplate.Text, dgvToInfo.Rows[0].Cells[0].Value.ToString());
+            lblPreview.Text = string.Format(txtEmailTemplate.Text,
+                                dgvToInfo.Rows[0].Cells[0].Value.ToString(),
+                                dgvToInfo.Rows[0].Cells[2].Value.ToString());
+
             lblPreview.Visible = true;
             btnSendEmails.Visible = true;
             btnAttach.Visible = true;

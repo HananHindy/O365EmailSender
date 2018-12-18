@@ -45,12 +45,15 @@ namespace O365EmailSender
             var _allFileData = excelReader.AsDataSet(conf);
 
             var rows = _allFileData.Tables[0].Rows.Cast<DataRow>();
+            bool hasCompany = _allFileData.Tables[0].Columns.Count > 2;
+
             foreach (var row in rows)
             {
                 Users.Add(new User()
                 {
                     Name = row[0].ToString(),
-                    Email = row[1].ToString()
+                    Email = row[1].ToString(),
+                    Company = hasCompany ? row[2].ToString() : string.Empty
                 });
             }
 
@@ -72,7 +75,7 @@ namespace O365EmailSender
 
                 email.Subject = subject;
 
-                email.Body = new MessageBody(string.Format(message, user.Name));
+                email.Body = new MessageBody(string.Format(message, user.Name, user.Company));
                 email.Body.BodyType = BodyType.Text;
 
                 if (this.Attachments != null && this.Attachments.Length > 0)

@@ -34,6 +34,7 @@
             this.dgvToInfo = new System.Windows.Forms.DataGridView();
             this.Name2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblToInfoMessage = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.txtEmailTemplate = new System.Windows.Forms.TextBox();
@@ -80,7 +81,8 @@
             this.dgvToInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvToInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Name2,
-            this.Email});
+            this.Email,
+            this.Company});
             this.dgvToInfo.Enabled = false;
             this.dgvToInfo.Location = new System.Drawing.Point(12, 139);
             this.dgvToInfo.Name = "dgvToInfo";
@@ -93,14 +95,20 @@
             this.Name2.HeaderText = "Name";
             this.Name2.MinimumWidth = 15;
             this.Name2.Name = "Name2";
-            this.Name2.Width = 300;
+            this.Name2.Width = 250;
             // 
             // Email
             // 
             this.Email.HeaderText = "Email";
             this.Email.MinimumWidth = 30;
             this.Email.Name = "Email";
-            this.Email.Width = 400;
+            this.Email.Width = 300;
+            // 
+            // Company
+            // 
+            this.Company.HeaderText = "Company";
+            this.Company.Name = "Company";
+            this.Company.Width = 200;
             // 
             // lblToInfoMessage
             // 
@@ -137,13 +145,13 @@
             // 
             // lblEmailInfo
             // 
-            this.lblEmailInfo.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailInfo.Font = new System.Drawing.Font("Lucida Calligraphy", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailInfo.Location = new System.Drawing.Point(816, 9);
             this.lblEmailInfo.Name = "lblEmailInfo";
             this.lblEmailInfo.Size = new System.Drawing.Size(684, 60);
             this.lblEmailInfo.TabIndex = 10;
-            this.lblEmailInfo.Text = "Please write the email here with {0} in place of Name. Press Next to preview the " +
-    "email with first Name";
+            this.lblEmailInfo.Text = "Please write the email here with {0} in place of Name and {1} for company name (i" +
+    "f needed). Press Next to preview the email with first Name and Company";
             this.lblEmailInfo.Visible = false;
             // 
             // btnNext2
@@ -249,10 +257,11 @@
         private System.Windows.Forms.Label lblPreview;
         private System.Windows.Forms.Button btnSendEmails;
         private System.Windows.Forms.TextBox txtSubject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.Button btnAttach;
         private System.Windows.Forms.TextBox txtAttachments;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Company;
     }
 }
 
